@@ -996,12 +996,15 @@ ${KATEX_HEAD}
   </div>
 
   <div class="toolbar">
-    <div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
       <button class="btn-tool" onclick="toggleAllSchemes(true)">👁️ Show All Marking Schemes</button>
       <button class="btn-tool" onclick="toggleAllSchemes(false)">🙈 Hide All Marking Schemes</button>
+      <button class="btn-tool" onclick="toggleProjector()">📽️ Toggle Projector Mode</button>
     </div>
-    <div>
-      <button class="btn-tool" onclick="toggleProjector()">📽️ Toggle Projector / Big Screen Mode</button>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <a href="SPM_Matematik_Kertas_1_Exam.pdf" download="SPM_Matematik_Kertas_1_Exam.pdf" class="btn-tool" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:#1e40af; background:#eff6ff; border-color:#bfdbfe; font-weight:bold;">📥 Download Paper 1 PDF</a>
+      <a href="SPM_Matematik_Kertas_2_Exam.pdf" download="SPM_Matematik_Kertas_2_Exam.pdf" class="btn-tool" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:#15803d; background:#f0fdf4; border-color:#bbf7d0; font-weight:bold;">📥 Download Paper 2 PDF</a>
+      <a href="SPM_Matematik_Skema_Pemarkahan.pdf" download="SPM_Matematik_Skema_Pemarkahan.pdf" class="btn-tool" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:#b45309; background:#fffbeb; border-color:#fde68a; font-weight:bold;">📥 Download Skema PDF</a>
     </div>
   </div>
 
@@ -1146,10 +1149,157 @@ ${KATEX_FOOT}
 </html>`;
 }
 
+function buildLandingPageHTML() {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPM 2026 Mathematics Forecast - Set 1</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-between p-6 md:p-12">
+
+  <!-- Header Section -->
+  <header class="text-center max-w-3xl mx-auto mt-4">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
+      <span>✨ SPM 2026 Forecast Edition</span> • <span>Set 1</span>
+    </div>
+    <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-3">
+      SPM Mathematics (1449)
+    </h1>
+    <p class="text-slate-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+      Targeted Forecast Examination Set based on SPM 2021–2025 actual examination trends with interactive classroom discussion modules and official marking schemes.
+    </p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl w-full mx-auto my-8 space-y-6">
+    
+    <!-- Top Featured: All-in-One Master Portal -->
+    <div class="bg-gradient-to-r from-blue-900/60 to-indigo-900/60 border border-blue-500/40 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl hover:border-blue-400 transition-all">
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider">
+          🌟 All-In-One Classroom Hub
+        </div>
+        <h2 class="text-2xl font-extrabold text-white">Interactive Classroom Discussion Suite</h2>
+        <p class="text-slate-300 text-sm max-w-xl leading-relaxed">
+          Access Paper 1, Paper 2, Formula Sheet, and full marking rubrics in a single unified interface with Projector Mode and live answer checks.
+        </p>
+      </div>
+      <div class="flex-shrink-0 w-full md:w-auto">
+        <a href="SPM_Matematik_Interactive_Discussion.html" class="block w-full text-center px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg transition-all hover:scale-105">
+          Launch Master Suite →
+        </a>
+      </div>
+    </div>
+
+    <!-- 2 Column Interactive Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Paper 1 Card -->
+      <div class="bg-slate-800/80 border border-slate-700 hover:border-blue-500/50 rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all hover:scale-[1.01]">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold rounded-full border border-blue-500/20">
+              1449/1 • Objective
+            </span>
+            <span class="text-xs text-slate-400 font-medium">1 hr 30 mins • 40 Marks</span>
+          </div>
+          <h2 class="text-xl font-bold text-white mb-2">Paper 1 (Kertas 1)</h2>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            40 multiple-choice questions with 2-column options, full bilingual text, and instant step-by-step scoring.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <a href="SPM_Matematik_Kertas_1_Interactive.html" class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all shadow-md">
+            <span>🚀 Launch Interactive Paper 1</span>
+          </a>
+          <a href="SPM_Matematik_Kertas_1_Exam.pdf" download="SPM_Matematik_Kertas_1_Exam.pdf" class="flex items-center justify-center gap-2 w-full py-2.5 bg-slate-700/80 hover:bg-slate-700 text-slate-200 text-sm font-medium rounded-xl transition-all border border-slate-600">
+            <span>📥 Download Paper 1 PDF (438 KB)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Paper 2 Card -->
+      <div class="bg-slate-800/80 border border-slate-700 hover:border-emerald-500/50 rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all hover:scale-[1.01]">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-full border border-emerald-500/20">
+              1449/2 • Subjective
+            </span>
+            <span class="text-xs text-slate-400 font-medium">2 hrs 30 mins • 100 Marks</span>
+          </div>
+          <h2 class="text-xl font-bold text-white mb-2">Paper 2 (Kertas 2)</h2>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Bahagian A, B, and C with right-aligned subpart marks, full official P/K/N marking rubrics, and examiner tips.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <a href="SPM_Matematik_Kertas_2_Interactive.html" class="flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-xl transition-all shadow-md">
+            <span>🚀 Launch Interactive Paper 2</span>
+          </a>
+          <a href="SPM_Matematik_Kertas_2_Exam.pdf" download="SPM_Matematik_Kertas_2_Exam.pdf" class="flex items-center justify-center gap-2 w-full py-2.5 bg-slate-700/80 hover:bg-slate-700 text-slate-200 text-sm font-medium rounded-xl transition-all border border-slate-600">
+            <span>📥 Download Paper 2 PDF (1.15 MB)</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Direct PDF Downloads Hub Section -->
+    <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-6 md:p-8 shadow-xl">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-bold text-xl">
+          📥
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Download Printable Examination Papers & Marking Scheme</h3>
+          <p class="text-xs text-slate-400">High-resolution standard A4 format for physical tests and classroom printing.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+        <a href="SPM_Matematik_Kertas_1_Exam.pdf" download="SPM_Matematik_Kertas_1_Exam.pdf" class="flex items-center justify-center gap-2 p-3 bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 hover:text-white border border-blue-500/30 rounded-xl text-sm font-bold transition-all text-center">
+          <span>📄 Paper 1 Exam PDF</span>
+        </a>
+        <a href="SPM_Matematik_Kertas_2_Exam.pdf" download="SPM_Matematik_Kertas_2_Exam.pdf" class="flex items-center justify-center gap-2 p-3 bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 hover:text-white border border-emerald-500/30 rounded-xl text-sm font-bold transition-all text-center">
+          <span>📝 Paper 2 Exam PDF</span>
+        </a>
+        <a href="SPM_Matematik_Skema_Pemarkahan.pdf" download="SPM_Matematik_Skema_Pemarkahan.pdf" class="flex items-center justify-center gap-2 p-3 bg-amber-600/20 hover:bg-amber-600/30 text-amber-300 hover:text-white border border-amber-500/30 rounded-xl text-sm font-bold transition-all text-center">
+          <span>📋 Skema Pemarkahan PDF</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="text-center text-slate-500 text-xs mt-4 mb-2">
+    <p>SPM 2026 Mathematics Forecast Set 1 • Sijil Pelajaran Malaysia (1449)</p>
+    <p class="mt-1">Prepared for educational classroom discussion and examination drill purposes.</p>
+  </footer>
+
+</body>
+</html>`;
+}
+
 const interactivePortalHtml = buildInteractivePortal();
 fs.writeFileSync(path.join(__dirname, 'SPM_Matematik_Interactive_Discussion.html'), interactivePortalHtml);
 fs.writeFileSync(path.join(__dirname, 'SPM_2026_Maths_Forecast_Set1_Interactive.html'), interactivePortalHtml);
-fs.writeFileSync(path.join(__dirname, 'index.html'), interactivePortalHtml);
+fs.writeFileSync(path.join(__dirname, 'index.html'), buildLandingPageHTML());
 console.log("SPM_Matematik_Interactive_Discussion.html, SPM_2026_Maths_Forecast_Set1_Interactive.html, and index.html generated.");
 
 // Generate Dedicated Paper 1 Interactive
@@ -1218,9 +1368,15 @@ ${KATEX_HEAD}
     </div>
     <div style="background:#e2e8f0; color:#334155; padding:6px 14px; border-radius:9999px; font-weight:700;">40 Soalan / 40 Questions</div>
   </div>
-  <div class="controls">
-    <button class="btn-ctrl" onclick="toggleAll(true)">👁️ Show All Marking Schemes</button>
-    <button class="btn-ctrl" onclick="toggleAll(false)">🙈 Hide All Marking Schemes</button>
+  <div class="controls" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
+    <div style="display:flex; gap:8px;">
+      <button class="btn-ctrl" onclick="toggleAll(true)">👁️ Show All Marking Schemes</button>
+      <button class="btn-ctrl" onclick="toggleAll(false)">🙈 Hide All Marking Schemes</button>
+    </div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <a href="SPM_Matematik_Kertas_1_Exam.pdf" download="SPM_Matematik_Kertas_1_Exam.pdf" class="btn-ctrl" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:#1e40af; background:#eff6ff; border-color:#bfdbfe; font-weight:bold;">📥 Download Paper 1 (PDF)</a>
+      <a href="SPM_Matematik_Skema_Pemarkahan.pdf" download="SPM_Matematik_Skema_Pemarkahan.pdf" class="btn-ctrl" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:#b45309; background:#fffbeb; border-color:#fde68a; font-weight:bold;">📥 Download Skema (PDF)</a>
+    </div>
   </div>
   ${P1_DATA.map(q => `
     <div class="q-card" id="card-p1-${q.id}">
@@ -1385,9 +1541,15 @@ ${KATEX_HEAD}
     </div>
     <div style="background:#e2e8f0; color:#334155; padding:6px 14px; border-radius:9999px; font-weight:700;">100 Markah / 100 Marks</div>
   </div>
-  <div class="controls">
-    <button class="btn-ctrl" onclick="toggleAll(true)">👁️ Show All Marking Schemes</button>
-    <button class="btn-ctrl" onclick="toggleAll(false)">🙈 Hide All Marking Schemes</button>
+  <div class="controls" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
+    <div style="display:flex; gap:8px;">
+      <button class="btn-ctrl" onclick="toggleAll(true)">👁️ Show All Marking Schemes</button>
+      <button class="btn-ctrl" onclick="toggleAll(false)">🙈 Hide All Marking Schemes</button>
+    </div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <a href="SPM_Matematik_Kertas_2_Exam.pdf" download="SPM_Matematik_Kertas_2_Exam.pdf" class="btn-ctrl" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:#15803d; background:#f0fdf4; border-color:#bbf7d0; font-weight:bold;">📥 Download Paper 2 (PDF)</a>
+      <a href="SPM_Matematik_Skema_Pemarkahan.pdf" download="SPM_Matematik_Skema_Pemarkahan.pdf" class="btn-ctrl" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:#b45309; background:#fffbeb; border-color:#fde68a; font-weight:bold;">📥 Download Skema (PDF)</a>
+    </div>
   </div>
   ${P2_DATA.map(q => `
     <div class="q-card" id="card-p2-${q.id}">
