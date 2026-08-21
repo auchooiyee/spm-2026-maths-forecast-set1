@@ -1146,8 +1146,11 @@ ${KATEX_FOOT}
 </html>`;
 }
 
-fs.writeFileSync(path.join(__dirname, 'SPM_Matematik_Interactive_Discussion.html'), buildInteractivePortal());
-console.log("SPM_Matematik_Interactive_Discussion.html generated.");
+const interactivePortalHtml = buildInteractivePortal();
+fs.writeFileSync(path.join(__dirname, 'SPM_Matematik_Interactive_Discussion.html'), interactivePortalHtml);
+fs.writeFileSync(path.join(__dirname, 'SPM_2026_Maths_Forecast_Set1_Interactive.html'), interactivePortalHtml);
+fs.writeFileSync(path.join(__dirname, 'index.html'), interactivePortalHtml);
+console.log("SPM_Matematik_Interactive_Discussion.html, SPM_2026_Maths_Forecast_Set1_Interactive.html, and index.html generated.");
 
 // Generate Dedicated Paper 1 Interactive
 function buildP1Interactive() {
@@ -1285,8 +1288,10 @@ ${KATEX_FOOT}
 </html>`;
 }
 
-fs.writeFileSync(path.join(__dirname, 'SPM_Matematik_Kertas_1_Interactive.html'), buildP1Interactive());
-console.log("SPM_Matematik_Kertas_1_Interactive.html generated.");
+const p1Html = buildP1Interactive();
+fs.writeFileSync(path.join(__dirname, 'SPM_Matematik_Kertas_1_Interactive.html'), p1Html);
+fs.writeFileSync(path.join(__dirname, 'SPM_2026_Maths_Forecast_Set1_Paper1.html'), p1Html);
+console.log("SPM_Matematik_Kertas_1_Interactive.html and SPM_2026_Maths_Forecast_Set1_Paper1.html generated.");
 
 // Generate Dedicated Paper 2 Interactive
 function buildP2Interactive() {
@@ -1440,7 +1445,8 @@ ${KATEX_FOOT}
 }
 
 fs.writeFileSync(path.join(__dirname, 'SPM_Matematik_Kertas_2_Interactive.html'), buildP2Interactive());
-console.log("SPM_Matematik_Kertas_2_Interactive.html generated.");
+fs.writeFileSync(path.join(__dirname, 'SPM_2026_Maths_Forecast_Set1_Paper2.html'), buildP2Interactive());
+console.log("SPM_Matematik_Kertas_2_Interactive.html and SPM_2026_Maths_Forecast_Set1_Paper2.html generated.");
 
 // Generate PDF Paper 1 HTML Print Layout
 function buildPrintPaper1() {

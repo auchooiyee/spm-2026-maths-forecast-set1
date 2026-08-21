@@ -1,23 +1,28 @@
 # SPM 2026 Mathematics Forecast Examination (Set 1)
-### Peperiksaan Ramalan SPM 2026 • Matematik (1449)
+### Peperiksaan Ramalan SPM 2026 • Matematik (1449) — Set 1
 
 Comprehensive, high-yield examination forecast package strictly adhering to the latest **KSSM SPM Mathematics (1449)** examination format. Fully bilingual (Bahasa Melayu & English) with interactive web apps, printable PDFs, complete rubrics (P, K, N marks), and full vector diagrams.
 
 ---
 
-## 📚 Repository Contents
+## 🌐 Live Interactive Web Portals (Set 1 Forecast)
+
+| Application / Document | Direct HTML File | Live GitHub Pages Link |
+|---|---|---|
+| 🌟 **Master Interactive Portal (Paper 1 + Paper 2)** | [`index.html`](index.html) / [`SPM_2026_Maths_Forecast_Set1_Interactive.html`](SPM_2026_Maths_Forecast_Set1_Interactive.html) | [Launch Master Web App](https://auchooiyee.github.io/spm-2026-maths-forecast-set1/) |
+| 📄 **Paper 1 Interactive Drill (Q1 - Q40)** | [`SPM_2026_Maths_Forecast_Set1_Paper1.html`](SPM_2026_Maths_Forecast_Set1_Paper1.html) | [Launch Paper 1 App](https://auchooiyee.github.io/spm-2026-maths-forecast-set1/SPM_2026_Maths_Forecast_Set1_Paper1.html) |
+| 📝 **Paper 2 Interactive Discussion (100 Marks)** | [`SPM_2026_Maths_Forecast_Set1_Paper2.html`](SPM_2026_Maths_Forecast_Set1_Paper2.html) | [Launch Paper 2 App](https://auchooiyee.github.io/spm-2026-maths-forecast-set1/SPM_2026_Maths_Forecast_Set1_Paper2.html) |
+
+---
+
+## 📚 Examination Suite Contents
 
 ### 📄 1. Printable PDF Examination Papers (A4 Standard)
-- **`SPM_Matematik_Kertas_1_Exam.pdf`** — Paper 1 (1449/1): 40 objective questions (2-column layout, formatted LaTeX formulas).
+- **`SPM_Matematik_Kertas_1_Exam.pdf`** — Paper 1 (1449/1): 40 objective questions (2-column $\times$ 2-row choice layout, formatted LaTeX math formulas).
 - **`SPM_Matematik_Kertas_2_Exam.pdf`** — Paper 2 (1449/2): 100 marks subjective paper (Bahagian A, B, C) with candidate answer space and right-aligned mark allocations.
 - **`SPM_Matematik_Skema_Pemarkahan.pdf`** — Complete official marking scheme with full step-by-step solutions and rubrics.
 
-### 🌐 2. Interactive Classroom Discussion Web Applications
-- **`SPM_Matematik_Interactive_Discussion.html`** — All-in-one classroom discussion portal with live answer evaluation, step-by-step scoring breakdown (P/K/N badges), examiner tips, and Projector Mode.
-- **`SPM_Matematik_Kertas_1_Interactive.html`** — Dedicated interactive drill portal for Paper 1.
-- **`SPM_Matematik_Kertas_2_Interactive.html`** — Dedicated interactive discussion portal for Paper 2.
-
-### 📝 3. Markdown Sources & Marking Schemes
+### 📝 2. Markdown Sources & Marking Schemes
 - **`SPM_Matematik_Kertas_1_Forecast.md`** — Source markdown for Paper 1.
 - **`SPM_Matematik_Kertas_2_Forecast.md`** — Source markdown for Paper 2.
 - **`SPM_Matematik_Kertas_1_Skema.md`** — Marking scheme source for Paper 1.
@@ -45,22 +50,6 @@ Comprehensive, high-yield examination forecast package strictly adhering to the 
 ---
 
 ## 💻 Tech Stack & Features
-- **Local KaTeX Typography:** Mathematical typesetting using local KaTeX rendering.
+- **Local KaTeX Typography:** Mathematical typesetting using local KaTeX rendering with CDN fallback.
 - **Vector Graphics:** Responsive inline SVGs with high-DPI scaling.
 - **Offline Ready:** Zero external runtime dependencies for PDF generation and local viewing.
-
----
-
-## 🛠️ Build & PDF Generation
-
-To regenerate the HTML files and PDFs:
-```bash
-# Generate HTML files
-node generate_full_spm.js
-
-# Sync markdown files
-node update_md.js
-
-# Compile PDFs using headless browser
-node make_pdf.js
-```
